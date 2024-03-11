@@ -17,5 +17,13 @@ export class User {
     email!: string;
     phone!: string;
     dateOfBirth!: Date;
+    createdTime!: string;
+    lastUpdatedTime!: string;
     // status!: UserAccountStatus;
+
+    setUserId(id: string){
+        this.userId = id;
+    }
+
 }
+

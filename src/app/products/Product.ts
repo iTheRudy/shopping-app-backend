@@ -1,9 +1,19 @@
+import {ProductCategory} from "./ProductConstants";
+
 export class Product {
-    constructor(productId: string, productName: string) {
-        this.productName = productName;
-        this.productId = productId;
+
+
+    constructor() {
     }
 
-    public productId: string;
-    public productName: string;
+    productId!: string;
+    productName!: string;
+    productPrice!: number;
+    productImage!: string;
+    productCategory!: ProductCategory
+    createdTime!: string;
+    lastUpdatedTime!: string;
+
+
+
 }

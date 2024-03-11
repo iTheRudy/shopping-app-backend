@@ -9,6 +9,7 @@ const userController = {
             const newUser = await userService.createUser(req.body);
             res.status(201).json(newUser);
         } catch (error) {
+            console.log(error);
             // @ts-ignore
             res.status(500).json({message: 'Failed to create user', error: error.message});
         }
@@ -22,6 +23,7 @@ const userController = {
             }
             res.json(user);
         } catch (error) {
+            console.log(error);
             // @ts-ignore
             res.status(500).json({message: 'Failed to get user', error: error.message});
         }
@@ -35,6 +37,7 @@ const userController = {
             }
             res.json(updatedUser);
         } catch (error) {
+            console.log(error);
             // @ts-ignore
             res.status(500).json({message: 'Failed to update user', error: error.message});
         }
@@ -46,6 +49,7 @@ const userController = {
             await userService.deleteUser(userId);
             res.sendStatus(204);
         } catch (error) {
+            console.log(error);
             // @ts-ignore
             res.status(500).json({message: 'Failed to delete user', error: error.message});
         }
@@ -56,6 +60,7 @@ const userController = {
             const users = await userService.getAllUsers();
             res.json(users);
         } catch (error) {
+            console.log(error);
             // @ts-ignore
             res.status(500).json({ message: 'Failed to fetch users', error: error.message });
         }
